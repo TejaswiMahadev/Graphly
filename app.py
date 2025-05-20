@@ -9,6 +9,7 @@ from langchain.chains import LLMChain
 from neo4j import GraphDatabase
 import plotly.graph_objects as go
 import numpy as np
+import os 
 
 class GlobalState:
     def __init__(self):
@@ -611,5 +612,8 @@ with gr.Blocks(title="3D Knowledge Graph Builder") as app:
         - Hover over nodes and edges to see details
         """)
 
+
 if __name__ == "__main__":
-    app.launch(share=True)
+    port = int(os.environ.get("PORT", 7860))  # Use 7860 as fallback if PORT isn't set
+    app.launch(server_name="0.0.0.0", server_port=port, share=False)
+
