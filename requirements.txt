@@ -1,0 +1,8 @@
+gradio
+pandas
+networkx
+plotly
+numpy
+langchain
+neo4j
+langchain-google-genai
