@@ -612,4 +612,4 @@ with gr.Blocks(title="3D Knowledge Graph Builder") as app:
         """)
 
 if __name__ == "__main__":
-    app.launch(debug=True)
+    app.launch(share=True)
